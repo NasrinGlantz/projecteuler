@@ -9,13 +9,17 @@ public class Problem1 {
    public void testSolution() {
       long answer = getSumOfMultiples3And5(10);
       assertThat(answer).isEqualTo(23);
-      getSumOfMultiples3And5(10);
+      getSumOfMultiples3And5(1000);
    }
    
    public long getSumOfMultiples3And5(long bound) {
       long answer = 0;
-      // SOLUTION
-      System.out.print(answer);
+      for(int i = 0; i < bound; i++) {
+         if (i%5 == 0 || i%3 == 0) {
+            answer += i;
+         }
+      }
+      System.out.println(answer);
       return answer;
    }
 }
